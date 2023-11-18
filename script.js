@@ -35,34 +35,38 @@ function createTodoItemElement(todo, index) {
 
 // 1. Implementasikan fungsi addTodoItem
 function addTodoItem() {
+  document.querySelector('#inputTodo').value
   // 1.1 Ambil nilai dari input field `#inputTodo`
   //     (Hint: gunakan `document.querySelector` dan `value`)
-
+  let object = {
+    'text' : '#inputTodo',
+    'done' : false,
+  };
   // 1.2 Buat sebuah object baru dengan key `text` dan `done`
   //     Isi `text` dengan nilai dari input field `#inputTodo` yang sudah diambil di langkah 1.1
   //     Isi `done` dengan nilai boolean `false`
-
+todoList.push(object);
   // 1.3 Tambahkan nilai tersebut ke dalam array `todoList`
 
   // 1.4 Kosongkan input field `#inputTodo`
   //     (Hint: gunakan `document.querySelector` dan `value`)
-
+document.querySelector('#inputTodo').value;
   // Panggil fungsi `renderTodoList` di paling akhir dari fungsi ini.
+  console.log(renderTodoList);
 }
-
 // 2. Berikan event handler `click` ke tombol "Tambah"
 //    yang memanggil fungsi addTodoItem.
 //    (Hint: gunakan `document.querySelector` dan `addEventListener`)
-
+document.querySelector('#inputTodo').addEventListener("click", addTodoItem);
 // 3. Kerjakan fungsi renderTodoList
 //    Fungsi ini digunakan untuk menampilkan to do item dari array `todoList`.
 function renderTodoList() {
   // 3.1 Ambil elemen <li> dengan id `todoList` dan masukkan ke dalam sebuah variabel
   //     (Hint: gunakan `document.querySelector`)
-
+  document.querySelector('#todoList');
   // 3.2 Kosongkan isi dari elemen <li> tersebut
   //     (Hint: gunakan `innerHTML`)
-
+li.innerHTML = ''
   // 3.3 Untuk setiap to do item yang ada di dalam array `todoList`.
   //     (Hint: gunakan `forEach` untuk melakukan iterasi pada array `todoList`)
   //     Di dalam loop `forEach`:
@@ -73,4 +77,6 @@ function renderTodoList() {
   //     3.3.2 Tambahkan hasil dari fungsi `createTodoItemElement`
   //           ke dalam variabel elemen <li> yang sudah diambil di langkah 3.1
   //           (Hint: gunakan `appendChild`)
+todoList.forEach (createTodoItemElement, index)
+document.querySelector(createTodoItemElement).appendChild
 }
